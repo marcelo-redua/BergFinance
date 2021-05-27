@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  font-family: 'Roboto';
+  font-size: 22px;
+  background-color: #FFFFFF;
+}
+
+/* navbar */
+
+.logo{
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #f1f1f1;
+  height: 8vh;
+}
+
+nav a{
+  color: #111;
+  text-decoration: none;
+}
+
+nav a:hover{
+  opacity: 0.3s;
+}
+
+.nav-list{
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li{
+  letter-spacing: 3px;
+  margin-left: 32px;
+  margin-top: 10px;
+}
+
+/* mobile navbar */
+
+.mobile-menu{
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div{
+  width: 32px;
+  height: 2px;
+  background: black;
+  margin: 8px;
+}
+
+@media only screen and (max-width: 900px){
+  body{
+    overflow-x: hidden;
+  }
+  .nav-list{
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 90vh;
+    background: #f1f1f1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+  }
+  .nav-list li{
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu{
+    display: block;
+  }
+  .nav-list.active{
+    transform: translateX(0);
+  }
+}
+
+/* footer */
+footer {
+  background: #F1F1F1;
+  height: auto;
+  width: 100%;
+  padding-top: 40px;
+  color: #111;
+  }
+
+.footer-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content h3{
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+
+.footer-content p{
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+.socials{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+
+.socials li{
+  margin: 0 10px;
+}
+
+.footer-bottom{
+  background: #d9d9d9;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* back to top */
+#back-to-top {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: #b3b3b3;
+  border-radius: 50%;
+  color: white;
+  border: none;
+  }
